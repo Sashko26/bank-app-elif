@@ -1,0 +1,128 @@
+<h2>Banks list</h2>
+          <div id="my_modal" class="modal">
+            
+              <div  class="modal_content">
+               
+                
+                
+
+                        <form id="update_form">
+                            
+                          <div class="form-group row">
+                              <span class="col-4" for="exampleInputPassword1">Bank name</span>
+                              <input name="change_bank_name" class="col-8"  type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+
+
+                            <div class="form-group row">
+                              <span class="col-4" for="exampleInputPassword1">Interest rate</span>
+                              <input name="change_interest_rate" class="col-8" type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+
+                            
+
+                            <div class="form-group row">
+                              <span class="col-4" for="exampleInputPassword1">Maximum loan</span>
+                              <input name="change_maximum_loan" class="col-8" type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+                                  
+                                    
+                            <div class="form-group row">
+                              <span class="col-4" for="exampleInputPassword1">Minimum down payment</span>
+                              <input name="change_minimum_down_payment" class="col-8" type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+
+                            <div class="form-group row">
+                              <span class="col-4" for="exampleInputPassword1">Loan term</span>
+                              <input name="change_loan_term" class="col-8" type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <input name="_id" type="hidden" value={{_id}}>
+                            <div class="row">
+
+                             
+                                <button id="exit" class="close_modal_window btn btn-dark col">Exit</button>
+                                
+                              <button id="submit" type="submit" class="subm btn btn-primary col">Submit</button>
+
+
+
+                            </div>
+                        
+                               
+                      </form>
+              </div>
+            </div>
+    
+         
+          
+
+          <div id='wrapper'>
+              {{#if banks.length}}
+          <div class="row text-light bg-dark entity">
+            <div class="col border border-light">
+             Bank name 
+            </div>
+            <div class="col border border-light">
+             Interest rate 
+            </div>
+            <div class="col border border-light">
+             Maximum loan  
+            </div>
+            <div class="col border border-light">
+             Minimum down payment  
+            </div>
+            <div class="col border border-light">
+             Loan term 
+            </div>
+            
+          </div>
+
+          {{#each banks}}
+          <div  class="row entity">
+            <div name="Bank_name" class="col border border-dark">
+             {{bank_name}}
+            </div>
+            <div name="Interest_rate" class="col border border-dark">
+              {{interest_rate}} % 
+            </div>
+            <div name="Maximum_loan" class="col border border-dark">
+              {{maximum_loan}} $ 
+            </div>
+            <div name="Minimum_down_payment" class="col border border-dark">
+             {{minimum_down_payment}} $ 
+            </div>
+            <div class="col border border-dark">
+             <div id="manage-block" class="row">
+              <div name="Loan_term" class="col-8">
+                  {{loan_term}} mounths 
+              </div>
+              
+              <div class="col-4">
+                
+                 <form    class="row text-light bg-dark  border border-light">
+                    <button id="edit"   class='text-light' data-id="q1w2e2">edit</button>
+                </form>
+                <form action="/delete" method="POST" id="remove" class="row text-light bg-dark  border border-light">
+                    <button name="remove_btn"  class='text-light' type="submit">
+                      <input name="id" value={{_id}} type="hidden">
+                      remove
+                      </button>
+                </form>
+                
+              </div>
+                
+             </div>
+             
+
+            </div>
+            <input name="_id" type="hidden" value={{_id}} type="text">
+          </div>
+          {{/each}}
+          {{else}}
+            <p>We haven't banks now in the system. Let's open new Bank!</p>
+          {{/if}}
+
+          </div>
+          
+
+

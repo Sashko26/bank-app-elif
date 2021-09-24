@@ -1,0 +1,109 @@
+
+@media (max-width: 940px) { 
+
+ #edit
+ {
+  font-size: 60%;
+ }
+ #remove
+ {
+  font-size: 60%; 
+ }
+}
+button {
+  outline: none; /* Для синий ободки */
+  border: 0;
+  background: transparent;
+  width: 100%;
+}
+.logo
+{
+  max-width: 25px;
+}
+.entity
+{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#edit
+{
+  margin-bottom: 0px;
+  
+}
+
+#remove{
+  margin-bottom: 0px;
+  
+}
+
+
+
+.todo label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background: #f3f3f3;
+  padding: 1rem;
+}
+
+.todo i {
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .header {
+     background-color: purple;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+     background-color: black;
+  }
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal .modal_content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  z-index: 99999;
+}
+
+#submit
+{
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#exit
+{
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
