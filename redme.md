@@ -7,4 +7,7 @@ project setup instruction:<br />
 5.in terminal of IDE type the command: npm install<br />
 6.after downloading packages type the command: npm run dev<br />
 7.write in the browser line http://127.0.0.1:3000/<br />
-8.you cau use this App now)  
+8.you cau use this App now)  <br />
+
+link on a deployed version : <br />
+https://banking-app-elif.herokuapp.com/
